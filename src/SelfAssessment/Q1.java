@@ -1,4 +1,4 @@
-package Practice;
+package SelfAssessment;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,13 +8,15 @@ public class Q1 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int input = Integer.parseInt(br.readLine());
+        int odd = 1;
         int cnt = 0;
         int sum = 0;
 
         while (true) {
             if (sum < input) {
                 cnt += 1;
-                sum += cnt;
+                sum += odd;
+                odd += 2;
             } else {
                 break;
             }
